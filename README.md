@@ -3,7 +3,7 @@
 ## Model-Based Design in Medical Device:
 
 
-![](Image/MBD_Workflow.gif)
+<img src="./Image/MBD_Workflow.gif" width=750 height=500>
 
 The Medical Device community is increasingly looking towards modeling and simulation techniques used in other safety-critical applications to reduce design risks and reduce probability of device recalls, in an environment of ever-increasing system and software complexity. 
 Model-Based Design is a simulation-based software development environment that incorporates verification and validation into the workflow. As a result, the functionality of the software is comprehensively tested and verified before you integrate it into a medical device. In addition, most of the documentation required by IEC 62304 standard are automatically created for regulatory compliance.
@@ -24,13 +24,20 @@ The automatic pumps are used when a better precision is needed. In this modeling
 ## Getting Started
 
 
-1. Open the project file InfusionPump.prj. This task will organize project folders, set path and provides shortcuts
+##### 1. Open the project file InfusionPump.prj. This task will organize project folders, set path and provides shortcuts
 
 ![](Image/Project_Shortcut.gif)
 
-2. To view top level model, open InfusionPumpModelV7.slx located within "Models" folder of this project. One can also use project shortcut to open this model.
+##### 2. To view top level model, open InfusionPumpModelV7.slx located within "Models" folder of this project. One can also use project shortcut to open this model.
+
+## What's Included
 
 <details>
+
+
+This project covers many short examples of critical model based design workflow. As, you can see from figure below, except realtime simulation/testing and cerrtification, we have provided all other examples. Please follow scripts below to execute each segment of the workflow.
+
+<img src="Image/MBD_adoption.gif" width=750 height=500>
 
 **[i] Requirement Management:** Click on 'Task_2_1_RequirementManagement' from project shortcut. This task will open original system level requirmenet document (Syringe Infusion Pump Delivery Logic Requirement.docx), model with requirements are tied to it and final report genereted which shows traceability between requirement and models
     
@@ -46,7 +53,7 @@ The automatic pumps are used when a better precision is needed. In this modeling
     
 **[vii] SIL/PIL Testing:** 'Task_2_5_SILEquivTest' test numerically equivalency between motor controller model and generated code.
 
-<summary>3. Model Based Design Workflow examples:</summary></details>
+<summary> Model Based Design Workflow examples: </summary></details>
 
 ## Contents
 
@@ -55,11 +62,11 @@ The automatic pumps are used when a better precision is needed. In this modeling
 
 The simulation of the infusion pump physical model, command generator, and its control. Run this model to simulate the controller. 
 
-#### Infusion Pump Plant Model: InfusionPumpPlantModel.slx
+#### Plant Model: InfusionPumpPlantModel.slx
 
-DC motor and drive system have been implemented to depress plunger  
+DC motor and drive system have been implemented to depress plunger. 
 
-#### Infusion Pump Software Model: InfusionPumpSoftwareModel.slx
+#### Software/Controller Model: InfusionPumpSoftwareModel.slx
 
 Contains motor controller, occlusion detection and supervisory logic. Goal is to deliver fluids into patient's body in a controlled manner. Supervisory logic is primarily used to control fluides into patient's body. Motor controller is used to drive DC motor and drive system. Occlusion detection detects resistance in delivery line.
 
