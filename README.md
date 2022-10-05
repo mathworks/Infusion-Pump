@@ -13,13 +13,12 @@ The automatic pumps are used when a better precision is needed. In this modeling
 ## Model-Based Design in Medical Device:
 
 
-<img src="./Image/MBD_Workflow.gif" width=750 height=500>
-
 The Medical Device community is increasingly looking towards modeling and simulation techniques used in other safety-critical applications to reduce design risks and reduce probability of device recalls, in an environment of ever-increasing system and software complexity. 
 Model-Based Design is a simulation-based software development environment that incorporates verification and validation into the workflow. As a result, the functionality of the software is comprehensively tested and verified before you integrate it into a medical device. In addition, most of the documentation required by IEC 62304 standard are automatically created for regulatory compliance.
-Model-Based Design is not new and has been been used for many years by the Aerospace,Automotive and Transportation industries for developing safety critical software systems.
 
-This project provides principles of model based design through the example of an infusion pump and simulating its dynamics. Using Simulink, Stateflow and Simscape, we can build, simulate, implment and test any dynamics system and understand the behavior of any device. 
+<img src="./Image/MBD_Workflow.gif" width=350 height=350>
+
+Model-Based Design is not new and has been been used for many years by the Aerospace,Automotive and Transportation industries for developing safety critical software systems. This project provides principles of model based design through the example of an infusion pump and simulating its dynamics. Using Simulink, Stateflow and Simscape, we can build, simulate, implment and test any dynamics system and understand the behavior of any device. 
 
 ## Getting Started
 
