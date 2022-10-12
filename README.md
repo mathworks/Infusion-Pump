@@ -70,17 +70,18 @@ DC motor and drive system have been implemented to depress plunger.
 Contains motor controller, occlusion detection and supervisory logic. Goal is to deliver fluids into patient's body in a controlled manner. Supervisory logic is primarily used to control fluides into patient's body. Motor controller is used to drive DC motor and drive system. Occlusion detection detects resistance in delivery line.
 
 
-## Products Needed
-
-
-If you have any issue or need trial licenses to access this project, please reach out to your MATHWORKS account manager or send email to medical@mathworks.com
-
 
 ## Videos and Files
 
 
 #### Modeling an Infusion Pump -- Video Series
 https://www.mathworks.com/videos/series/modeling-an-infusion-pump.html
+
+
+## Contact Us
+
+
+If you have any issue or need trial licenses to access this project, please reach out to your MATHWORKS account manager or send email to medical@mathworks.com
 
 
 ====================================================
