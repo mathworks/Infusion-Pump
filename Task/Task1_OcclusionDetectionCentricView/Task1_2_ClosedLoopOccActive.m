@@ -6,4 +6,5 @@ clear
 open('InfusionPumpModelV7')
 close all
 open('Test2.fig')
+movegui('center');
 open('Test1.fig')

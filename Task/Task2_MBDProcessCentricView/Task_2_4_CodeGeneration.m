@@ -5,6 +5,7 @@ clear
 run InitializationInsulinPump
 close all
 open('InfusionPumpSoftwareModel')
+[status, msg, msgID] = mkdir('CodeGen')
 cd Codegen;
 slbuild('InfusionPumpSoftwareModel')
 cd ../
