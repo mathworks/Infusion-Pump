@@ -38,13 +38,13 @@ This project covers many short examples of critical model based design workflow.
 
 <img src="Image/MBD_adoption.gif" width=750 height=500>
 
-**[i] Requirement Management:** Click on 'Task_2_1_RequirementManagement' from project shortcut. This task will open original system level requirmenet document (Syringe Infusion Pump Delivery Logic Requirement.docx), model with requirements are tied to it and final report genereted which shows traceability between requirement and models
+**[i] Requirement Management:** Click on 'Task_1_RequirementManagement' from project shortcut. This task will open original system level requirmenet document (Syringe Infusion Pump Delivery Logic Requirement.docx), model with requirements are tied to it and final report genereted which shows traceability between requirement and models
     
-**[ii] Algorithm Design:** Open a high level infusion pump model which contains plant and controller models by clicking on 'Task1_1_ClosedLoopOccDeactivated' or 'Task1_2_ClosedLoopOccActive'. Simulink, Stateflow and Simscape products are used to build this model.
+**[ii] Algorithm Design:** Open a high level infusion pump model which contains plant and controller models by clicking on 'Task_2_1_ClosedLoopOccDeactivated' or 'Task_2_2_ClosedLoopOccActive'. Simulink, Stateflow and Simscape products are used to build this model.
     
-**[iii] Modeling Standards:** The MathWorks 'Model Advisor' assists the developer in reporting violations of block settings, model configurations, or modeling styles (readability) that do not comply with such guidelines. 'Task_2_2_ModelAdvisor' opens model advisor toolbox for infusion pump top level model. User can select/deselect checks
+**[iii] Modeling Standards:** The MathWorks 'Model Advisor' assists the developer in reporting violations of block settings, model configurations, or modeling styles (readability) that do not comply with such guidelines. 'Task_3_ModelAdvisor' opens model advisor toolbox for infusion pump top level model. User can select/deselect checks
     
-**[iv] Simulink Test:** Tasks 1_4, 1_5 and 1_6 are related to simulink test. Unit test, baseline test and report generations examples are covered in these three tasks.
+**[iv] Simulink Test:** Tasks_4_1, Tasks_4_2 and Tasks_4_3 are related to simulink test. Unit test, baseline test and report generations examples are covered in these three tasks.
     
 **[v] Simulink Coverage:** 'Task_2_3_ModelCoverage' initiate simulink design verifier and shows workflow to automatically generate extended test cases to make sure design has been completely tested with 100% coverage. 
     
