@@ -1,4 +1,4 @@
-% Task1_2 Open a closed loop model with occlusion detection activated.
+% Task_2_2 Open a closed loop model with occlusion detection activated.
 % UI Simulink and Matlab Figure
 clc
 bdclose('all')

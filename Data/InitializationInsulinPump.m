@@ -1,76 +1,76 @@
 % clear 
 close all
 %% DC Motor
-const.DCMotor.RotorInert = 8.2e-9;  % rotor inertia (kg*m^2) - DC Motor
-const.DCMotor.RotorDamp  = 2e-9;    % rotor damping (N*m/(rad/s)) - DC Motor
-const.DCMotor.Resist     = 31.4;    % resistance (Ohms)
-const.DCMotor.Induct     = 30e-3;   % inductance (H)
-const.DCMotor.BEMF       = 4.74e-3; % back EMF constant (V/(rad/s))
-const.DCMotor.CalTabVolt = [0 0.25 0.3 0.35 0.355 0.36 0.38 0.4 0.5 1 1.5 2 2.3 2.72 3.5 3.9 4.4 4.6 4.8];
-const.DCMotor.CalTabSpd  = [0 0.136 0.170 0.205 1.08 2.58 8.02 12.8 33.8 828.2 1535.4 2171.5 2526 3000 3827.2 4246 4775.6 4991.1 5209.4];
-% const.DCMotor.StrokeLim  = 60*15
+reserv_str.DCMotor.RotorInert = 8.2e-9;  % rotor inertia (kg*m^2) - DC Motor
+reserv_str.DCMotor.RotorDamp  = 2e-9;    % rotor damping (N*m/(rad/s)) - DC Motor
+reserv_str.DCMotor.Resist     = 31.4;    % resistance (Ohms)
+reserv_str.DCMotor.Induct     = 30e-3;   % inductance (H)
+reserv_str.DCMotor.BEMF       = 4.74e-3; % back EMF constant (V/(rad/s))
+reserv_str.DCMotor.CalTabVolt = [0 0.25 0.3 0.35 0.355 0.36 0.38 0.4 0.5 1 1.5 2 2.3 2.72 3.5 3.9 4.4 4.6 4.8];
+reserv_str.DCMotor.CalTabSpd  = [0 0.136 0.170 0.205 1.08 2.58 8.02 12.8 33.8 828.2 1535.4 2171.5 2526 3000 3827.2 4246 4775.6 4991.1 5209.4];
+% reserv_str.DCMotor.StrokeLim  = 60*15
 % figure
-% plot(const.DCMotor.CalTabSpd,const.DCMotor.CalTabVolt,'.-')
+% plot(reserv_str.DCMotor.CalTabSpd,reserv_str.DCMotor.CalTabVolt,'.-')
 % xlabel('Speed (RPM)')
 % ylabel('Voltage (V)')
 % grid
 %% Drive System
-const.DriveSys.GearRatio = 216;     % gear ratio
-const.DriveSys.GearEff   = 0.68;    % gear efficiency
-const.DriveSys.ScrewLead = 1/24;    % displacement per revolution (inches)
-const.DriveSys.LeadAng   = 2.2;     % lead angle (degrees)
-const.DriveSys.AcmeHalfAng = 30;    % acme thread half angle (degrees)
-const.DriveSys.FricCoeff = 0.08;    % leadscrew friction coefficient
-const.DriveSys.DepdFricCoeff = const.DCMotor.RotorDamp/10;
+reserv_str.DriveSys.GearRatio = 216;     % gear ratio
+reserv_str.DriveSys.GearEff   = 0.68;    % gear efficiency
+reserv_str.DriveSys.ScrewLead = 1/24;    % displacement per revolution (inches)
+reserv_str.DriveSys.LeadAng   = 2.2;     % lead angle (degrees)
+reserv_str.DriveSys.AcmeHalfAng = 30;    % acme thread half angle (degrees)
+reserv_str.DriveSys.FricCoeff = 0.08;    % leadscrew friction coefficient
+reserv_str.DriveSys.DepdFricCoeff = reserv_str.DCMotor.RotorDamp/10;
 %% Slide
-const.Slide.Mass = 1.585/1000;  % slide mass (kg)
-const.Slide.Brkaway = 0.75;
-const.Slide.Coulomb = const.Slide.Brkaway*0.8;
-const.Slide.ViscFric = 0.5;
-const.Slide.TransApproxCoeff = 10/1000;
-const.Slide.LinVelThresh = 1e-5/1000;
-const.Slide.EMod  = 2.79e9;
-const.Slide.CrosA = 2.38e-5;      % slide annulus cross-sectional area (m^2)
-const.Slide.InitL = 5/1000;  % initial length of slide (m)
-const.Slide.MaxLen = 33/1000;
-const.Slide.MinSprRate = const.Slide.EMod*const.Slide.CrosA/const.Slide.MaxLen;
-const.Slide.InitDeform = 0;
+reserv_str.Slide.Mass = 1.585/1000;  % slide mass (kg)
+reserv_str.Slide.Brkaway = 0.75;
+reserv_str.Slide.Coulomb = reserv_str.Slide.Brkaway*0.8;
+reserv_str.Slide.ViscFric = 0.5;
+reserv_str.Slide.TransApproxCoeff = 10/1000;
+reserv_str.Slide.LinVelThresh = 1e-5/1000;
+reserv_str.Slide.EMod  = 2.79e9;
+reserv_str.Slide.CrosA = 2.38e-5;      % slide annulus cross-sectional area (m^2)
+reserv_str.Slide.InitL = 5/1000;  % initial length of slide (m)
+reserv_str.Slide.MaxLen = 33/1000;
+reserv_str.Slide.MinSprRate = reserv_str.Slide.EMod*reserv_str.Slide.CrosA/reserv_str.Slide.MaxLen;
+reserv_str.Slide.InitDeform = 0;
 %% Reservoir 
-const.Resvor.PistonMass = 0.417/1000;  % piston mass (kg)
-const.Resvor.Brkaway = 1.5;
-const.Resvor.Coulomb = const.Resvor.Brkaway*0.8;
-const.Resvor.ViscFric = 0.5;
-const.Resvor.TransApproxCoeff = 10/1000;
-const.Resvor.LinVelThresh = 1e-5/1000;
-const.Resvor.Len = 26.575; %% mm
-const.Resvor.InDiam = 0.4720;    % inner diameter (inches)
-const.Resvor.OutDiam = 0.547; % outer diameter (inches)
-const.Resvor.Area = (const.Resvor.InDiam*2.54*10)^2/4*pi; % reservoir cross-sectional area (mm^2)
-const.Resvor.Vol  = const.Resvor.Area*const.Resvor.Len;
-const.Resvor.InitP = 101325;     % initial pressure (Pa)
+reserv_str.Resvor.PistonMass = 0.417/1000;  % piston mass (kg)
+reserv_str.Resvor.Brkaway = 1.5;
+reserv_str.Resvor.Coulomb = reserv_str.Resvor.Brkaway*0.8;
+reserv_str.Resvor.ViscFric = 0.5;
+reserv_str.Resvor.TransApproxCoeff = 10/1000;
+reserv_str.Resvor.LinVelThresh = 1e-5/1000;
+reserv_str.Resvor.Len = 26.575; %% mm
+reserv_str.Resvor.InDiam = 0.4720;    % inner diameter (inches)
+reserv_str.Resvor.OutDiam = 0.547; % outer diameter (inches)
+reserv_str.Resvor.Area = (reserv_str.Resvor.InDiam*2.54*10)^2/4*pi; % reservoir cross-sectional area (mm^2)
+reserv_str.Resvor.Vol  = reserv_str.Resvor.Area*reserv_str.Resvor.Len;
+reserv_str.Resvor.InitP = 101325;     % initial pressure (Pa)
 %% Needle
-const.Needle.Diam = 0.0055; % inch
-const.Needle.Ang  = 55;     % deg
-const.Needle.Len  = 0.29;   % inch
-const.Needle.InitP = 101325;     % initial pressure (Pa)
+reserv_str.Needle.Diam = 0.0055; % inch
+reserv_str.Needle.Ang  = 55;     % deg
+reserv_str.Needle.Len  = 0.29;   % inch
+reserv_str.Needle.InitP = 101325;     % initial pressure (Pa)
 %% Silicone Septum
-const.Septum.Capacity = 6;          % silicone septum capacity (mm^3) - silicone septum Spring-Loaded Accumulator
-const.Septum.PreloadP = 5e6;    % silicone septum preload pressure (Pa) - silicone septum Spring-Loaded Accumulator
-const.Septum.MaxP = 3e8;    % maximum pressure in spring-loaded accumulator (Pa)
+reserv_str.Septum.Capacity = 6;          % silicone septum capacity (mm^3) - silicone septum Spring-Loaded Accumulator
+reserv_str.Septum.PreloadP = 5e6;    % silicone septum preload pressure (Pa) - silicone septum Spring-Loaded Accumulator
+reserv_str.Septum.MaxP = 3e8;    % maximum pressure in spring-loaded accumulator (Pa)
 %% Tubing
-const.Tubing.Diam = 0.1925*2; % tubing diameter (mm)
-const.Tubing.Area = (const.Tubing.Diam/(2*1000))^2*pi;  % tubing cross sectional area (m^2)
-const.Tubing.Len = 43;   % length (in) - tubing
-const.Tubing.InitP = 101325;     % initial pressure (Pa)
-const.Tubing.Compliance = 4e-13;    % static diameter pressure coefficient (m/Pa) - tubing
+reserv_str.Tubing.Diam = 0.1925*2; % tubing diameter (mm)
+reserv_str.Tubing.Area = (reserv_str.Tubing.Diam/(2*1000))^2*pi;  % tubing cross sectional area (m^2)
+reserv_str.Tubing.Len = 43;   % length (in) - tubing
+reserv_str.Tubing.InitP = 101325;     % initial pressure (Pa)
+reserv_str.Tubing.Compliance = 4e-13;    % static diameter pressure coefficient (m/Pa) - tubing
 %% Infusion Septum
-const.Infu.Capacity = const.Septum.Capacity/5; % mm^3
-const.Infu.PreloadP = const.Septum.PreloadP/5;  % Pa
-const.Infu.MaxP = 3e8;    % maximum pressure in spring-loaded accumulator (Pa)
+reserv_str.Infu.Capacity = reserv_str.Septum.Capacity/5; % mm^3
+reserv_str.Infu.PreloadP = reserv_str.Septum.PreloadP/5;  % Pa
+reserv_str.Infu.MaxP = 3e8;    % maximum pressure in spring-loaded accumulator (Pa)
 %% Occulusion
-const.Occl.Time = 50;
+reserv_str.Occl.Time = 50;
 const_Occl_Pct = 0.9999; %
-% const.Occl.Pct = 0.99999;
+% reserv_str.Occl.Pct = 0.99999;
 %% Control
 DeliveryType = 1;
 MagB = 1; % 1 2 3

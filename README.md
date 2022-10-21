@@ -46,11 +46,13 @@ This project covers many short examples of critical model based design workflow.
     
 **[iv] Simulink Test:** Tasks_4_1, Tasks_4_2 and Tasks_4_3 are related to simulink test. Unit test, baseline test and report generations examples are covered in these three tasks.
     
-**[v] Simulink Coverage:** 'Task_2_3_ModelCoverage' initiate simulink design verifier and shows workflow to automatically generate extended test cases to make sure design has been completely tested with 100% coverage. 
+**[v] Simulink Coverage:** 'Task_5_ModelCoverage' initiate simulink design verifier and shows workflow to automatically generate extended test cases to make sure design has been completely tested with 100% coverage. 
     
-**[vi] Code Generation:** 'Task_2_4_CodeGeneration' generates code for Infusion pump software model which includes supervisory logic, occlusion detection and motor controller.
+**[vi] Code Generation:** 'Task_6_CodeGeneration' generates code for Infusion pump software model which includes supervisory logic, occlusion detection and motor controller.
     
-**[vii] SIL/PIL Testing:** 'Task_2_5_SILEquivTest' test numerically equivalency between motor controller model and generated code.
+**[vii] SIL/PIL Testing:** 'Task_7_SILEquivTest' test numerically equivalency between motor controller model and generated code.
+
+**[viii] Parameter Sweep & Parallel Processing:** 'Task_8_ParameterSweep' save the results for the occlusion detection test with various critical parameter variation. This script implemented to run this parameter sweep using parallel processing (through local workers) to expedite test data generation process. 
 
 <summary> Model Based Design Workflow examples: </summary></details>
 

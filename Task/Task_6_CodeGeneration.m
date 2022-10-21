@@ -1,4 +1,4 @@
-% Task_2_4_Codegeneration
+% Task_6_Codegeneration
 %% Open code generation report and inspect linkage to the model, requirement and different model reference
 bdclose('all')
 clear
@@ -10,3 +10,5 @@ cd Codegen;
 slbuild('InfusionPumpSoftwareModel')
 cd ../
 coder.report.generate('InfusionPumpSoftwareModel');
+
+[status, message, messageid] = rmdir('CodeGen\slprj\','s');

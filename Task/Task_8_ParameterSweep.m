@@ -1,4 +1,4 @@
-% Task1_3 Run the model (occlusion detection deactivated) with parameter variations and save the results
+% Task_8_ Run the model (occlusion detection deactivated) with parameter variations and save the results
 % Matlab
 % The following parameters are varied
 % 1. Bolus magnitude
@@ -11,7 +11,8 @@ clc
 close all
 clear
 run InitializationInsulinPump
-edit ParameterSweep
+run ParameterSweep
+delete(gcp("nocreate"));
 % uncomment the following to run the parameter sweep
 % run ParameterSweep
 %% Verify whether the data format is still avaliable for the batch generation

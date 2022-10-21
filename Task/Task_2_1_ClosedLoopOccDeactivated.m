@@ -1,4 +1,4 @@
-% Task1_1 Open a closed loop model with occlusion detection deactivated.
+% Task_2_1 Open a closed loop model with occlusion detection deactivated.
 % UI Simulink and Matlab Figure
 % Review the model architecture here with the audience
 clc
