@@ -20,9 +20,12 @@ Model-Based Design is a simulation-based software development environment that i
 
 Model-Based Design is not new and has been been used for many years by the Aerospace,Automotive and Transportation industries for developing safety critical software systems. This project provides principles of model based design through the example of an infusion pump and simulating its dynamics. Using Simulink, Stateflow and Simscape, we can build, simulate, implment and test any dynamics system and understand the behavior of any device. 
 
-For more information on model-based design workflows in medical devices, please feel free to read the following whitepapers
-[Model-Based Design for Medical Devices ](https://www.mathworks.com/content/dam/mathworks/white-paper/gated/model-based-design-medical-devices-white-paper.pdf)
-[Best practices for IEC 62304 compliance with Model-Based Design](https://www.mathworks.com/content/dam/mathworks/white-paper/using-mbd-iec-62304-compliant-software-dev-process-whitepaper.pdf))
+For more information on model-based design workflows in medical devices, please feel free to read the following whitepapers: 
+
+1. [Model-Based Design for Medical Devices ](https://www.mathworks.com/content/dam/mathworks/white-paper/gated/model-based-design-medical-devices-white-paper.pdf)
+2. [Best practices for IEC 62304 compliance with Model-Based Design](https://www.mathworks.com/content/dam/mathworks/white-paper/using-mbd-iec-62304-compliant-software-dev-process-whitepaper.pdf)
+
+
 
 
 ## Getting Started
