@@ -15,14 +15,14 @@ load_system("MotorController.slx");
 tf = sltest.testmanager.TestFile('Test/InfusionPumpTest.mldatx');
 ts = getTestSuites(tf); 
 testcaseObj = ts(1).getTestCases;
-tr = run(testcaseObj(3));
+tr = run(testcaseObj(2));
 cvdata = getCoverageResults(tr);
 sltest.testmanager.view;
 
 %pause(20);
 f= msgbox(["Check Motor Controller 'Extended Test Case' result";"";"Click OK to continue generating additional test cases for '100% model Coverage'"]);
 uiwait(f);
-testOpts = sltest.testmanager.TestOptions(testcaseObj(3)); 
+testOpts = sltest.testmanager.TestOptions(testcaseObj(2)); 
 newTestCaseObj = sltest.testmanager.addTestsForMissingCoverage...
    (testOpts,cvdata);
 tr = run(newTestCaseObj);
@@ -40,3 +40,5 @@ sltest.testmanager.close
 [status, message, messageid] = rmdir('slprj\','s');
 [status, message, messageid] = rmdir('Work\slprj\','s');
 
+bdclose('all')
+clear;
