@@ -85,7 +85,7 @@ Contains motor controller, occlusion detection and supervisory logic. Goal is to
 
 
 #### Modeling an Infusion Pump -- Intro to Simulink for modeling & simulation
-[https://www.mathworks.com/videos/series/modeling-an-infusion-pump.html](https://www.mathworks.com/videos/introduction-to-simulink-for-system-modeling-and-simulation-1611776891718.html)
+[Infusion pump modeling & simulation video](https://www.mathworks.com/videos/introduction-to-simulink-for-system-modeling-and-simulation-1611776891718.html)
 
 #### Open Files from MATLAB Online
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/Infusion-Pump)
